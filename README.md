@@ -1,7 +1,9 @@
-Vue cli based frontend boilerplate
-==================================
+Vue cli based frontend example
+==============================
 
 Vuie cli based frontend PWA example with localization and themezation
+
+Demo: https://crypto-example.firebaseapp.com/main
 
 Deploy
 ------
