@@ -1,0 +1,26 @@
+// App light theme
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+%theme-light {
+  $colors__background: #fafafa !global;
+  $colors__background--dark: lighten($colors__primary, ($fade--percent * 6.5)) !global;
+  $colors__text: #6c7a89 !global;
+  $colors__card: $colors__white !global;
+  $colors__border: #c6dde5 !global;
+
+  $colors__placeholder: $colors__border !global;
+}
+
+.app {
+  &--light {
+    @extend %theme-light !optional;
+
+    @include themes-content;
+
+    .footer {
+      background: $colors__border;
+    }
+  }
+}
