@@ -19,6 +19,10 @@
 
     @include themes-content;
 
+    .label {
+      color: darken($colors__border, ($fade--percent * 2.5));
+    }
+
     .footer {
       background: $colors__border;
     }

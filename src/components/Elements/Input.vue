@@ -288,7 +288,7 @@
         &-plus,
         &-minus {
           position: absolute;
-          right: 3px;
+          right: 5px;
           @include size(18px, 18px);
 
           &::after {

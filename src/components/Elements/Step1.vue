@@ -1,6 +1,6 @@
 <template>
   <div class="form step1">
-    <h3>1. {{ $t('elements.step1.header') }}</h3>
+    <h3 class="label">1. {{ $t('elements.step1.header') }}</h3>
     <div class="step1__controls">
       <a
         href="#"
@@ -11,7 +11,7 @@
         v-else="state"
         class="step1__control"
       >{{ $t('elements.step1.address') }}</span>
-      <span class="step1__or">{{ $t('elements.step1.or') }}</span>
+      <span class="step1__or"> / </span>
       <a
         href="#"
         v-if="state"
@@ -40,11 +40,21 @@
           <Button
             skin="transparent-bit"
             link="https://wallet.bip.to/"
-          >{{ $t('elements.step1.bit') }}</Button>
+          >
+            <span class="hidden--mobile">
+              {{ $t('elements.step1.bit.part1') }}
+            </span>
+            {{ $t('elements.step1.bit.part2') }}
+          </Button>
           <Button
             skin="transparent-minter"
             link="https://console.minter.network/"
-          >{{ $t('elements.step1.minter') }}</Button>
+          >
+            <span class="hidden--mobile">
+              {{ $t('elements.step1.minter.part1') }}
+            </span>
+            {{ $t('elements.step1.minter.part2') }}
+          </Button>
         </div>
         <div
           class="tab tab--2"
@@ -53,7 +63,14 @@
         >
           <div class="tab--2__wrapper">
             <div>
-              <h4 class="step1__text">{{ $t('elements.step1.ammout') }}</h4>
+              <h4 class="step1__text">
+                <span class="hidden--mobile">
+                  {{ $t('elements.step1.ammout.notxs') }}
+                </span>
+                <span class="visible--mobile">
+                  {{ $t('elements.step1.ammout.xs') }}
+                </span>
+              </h4>
               <Input
                 :count.sync="ammount"
                 :range="[1, 10000]"
@@ -109,7 +126,11 @@
     height: $steps__height;
 
     @include xs {
-      height: auto;
+      height: $steps__height - $gutter;
+    }
+
+    @include min {
+      height: $steps__height - ($gutter * 2);
     }
 
     &__controls {
@@ -124,10 +145,14 @@
       @include not-gadgets {
         white-space: nowrap;
       }
+
+      @include min {
+        @include text($font-family__sans, $font-size--small, $font-weight__sans__bold);
+      }
     }
 
     &__control {
-      opacity: 0.5;
+      opacity: $fade--disabled;
       white-space: nowrap;
     }
 
@@ -138,6 +163,11 @@
       margin-right: $gutter;
 
       @include md {
+        margin-left: $gutter / 2;
+        margin-right: $gutter / 2;
+      }
+
+      @include xs {
         margin-left: $gutter / 2;
         margin-right: $gutter / 2;
       }
@@ -184,6 +214,10 @@
         display: flex;
         align-items: center;
         padding-top: $gutter;
+
+        @include xs {
+          padding-top: $gutter * 2;
+        }
       }
 
       @include gadgets {
@@ -201,6 +235,14 @@
       display: block;
       margin: 0 auto;
       margin-left: $gutter;
+
+      @include xs {
+        @include size(160px, 160px);
+      }
+
+      @include min {
+        @include size(130px, 130px);
+      }
     }
   }
 </style>

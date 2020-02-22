@@ -67,6 +67,10 @@
     padding: $btn_padding_vertical_base $btn_padding_horizontal_base;
     @include text($font-family__sans, $font-size--small, $font-weight__sans__bold);
 
+    @include xs {
+      @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__bold);
+    }
+
     &--primary {
       @include btn-color($colors__text, $colors__primary);
 

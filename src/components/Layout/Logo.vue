@@ -26,12 +26,19 @@ export default {
     display: flex;
     flex-direction: row;
 
-    img {
-      margin-right: $gutter;
+    a, img {
       @include size(60px, 60px);
 
       @include xs {
         @include size(40px, 40px);
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin-right: $gutter;
+
+      @include xs {
         margin-right: $gutter / 2;
       }
     }

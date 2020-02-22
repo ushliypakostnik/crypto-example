@@ -1,6 +1,6 @@
 <template>
   <div class="form step2">
-    <h3>2. {{ $t('elements.step2.header') }}</h3>
+    <h3 class="label">2. {{ $t('elements.step2.header') }}</h3>
   </div>
 </template>
 
@@ -17,7 +17,7 @@
     height: $steps__height;
     opacity: $fade--disabled;
 
-    @include xs {
+    @include gadgets {
       height: auto;
     }
   }

@@ -18,6 +18,9 @@
     @extend %theme-dark !optional;
 
     @include themes-content;
+
+    .label {
+      color: lighten($colors__border, ($fade--percent * 4));
+    }
   }
 }
-

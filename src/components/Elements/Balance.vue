@@ -2,7 +2,7 @@
   <div class="form balance">
     <Loading />
     <h4>{{ $t('elements.balance.loader') }}</h4>
-    <h4><strong>{{ $t('elements.balance.balance') }}:</strong></h4>
+    <h4 class="label"><strong>{{ $t('elements.balance.balance') }}:</strong></h4>
     <h3>0 Bip</h3>
   </div>
 </template>
@@ -24,6 +24,12 @@
 
   .balance {
     text-align: center;
+
+    &.form {
+      @include lg {
+        padding: $gutter;
+      }
+    }
 
     h4 {
       margin-top: $gutter / 2;

@@ -39,11 +39,16 @@ export const LOCALES = {
       step1: {
         header: 'Send coins',
         address: 'ADDRESS',
-        or: 'or',
         deeplink: 'DEEPLINK',
         copy: 'Copy address',
-        bit: 'Open wallet.bit.to',
-        minter: 'Open console.minter',
+        bit: {
+          part1: 'Open ',
+          part2: 'wallet.bit.to',
+        },
+        minter: {
+          part1: 'Open ',
+          part2: 'console.minter',
+        },
         ammout: 'Ammount BIP',
       },
       balance: {
@@ -66,12 +71,20 @@ export const LOCALES = {
       step1: {
         header: 'Отправить монеты',
         address: 'По адресу',
-        or: 'или',
         deeplink: 'По QR-коду',
         copy: 'Скопируйте адрес',
-        bit: 'Открыть wallet.bit.to',
-        minter: 'Открыть console.minter',
-        ammout: 'Количество BIP',
+        bit: {
+          part1: 'Открыть ',
+          part2: 'wallet.bit.to',
+        },
+        minter: {
+          part1: 'Открыть ',
+          part2: 'console.minter',
+        },
+        ammout: {
+          notxs: 'Количество BIP',
+          xs: 'Кол-во BIP',
+        },
       },
       balance: {
         loader: 'В ожидании монет',
