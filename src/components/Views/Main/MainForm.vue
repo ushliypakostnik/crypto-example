@@ -31,7 +31,7 @@
       </Button>
     </div>
 
-    <div class="form--main__block hidden--mobile">
+    <div class="form--main__block hidden--mobile hidden--tablet">
       <h3 class="label">{{ $t('views.main.header2') }}</h3>
 
       <div class="form--main__qr">
