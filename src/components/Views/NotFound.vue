@@ -13,12 +13,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "@/styles/_stylebase.scss";
 
   .page404 {
-    margin-top: -10vh;
-
     h1 {
       color: $colors__primary;
       margin: 0;
