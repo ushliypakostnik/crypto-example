@@ -169,37 +169,37 @@
 // Buttons
 
 @mixin btn-color($color, $background) {
-  &,
-  &:focus {
-    background-color: $background;
-    color: $color;
-    will-change: background;
-    @include transitions(background);
-  }
+  background-color: $background;
+  color: $color;
+  will-change: background;
+  @include transitions(background);
 
-  &:hover,
-  &:active {
-    background-color: darken($background, $fade--percent);
-    color: $color;
+  @include not-gadgets {
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: darken($background, $fade--percent);
+      color: $color;
+    }
   }
 }
 
 @mixin btn-transparent-color($color) {
-  &,
-  &:focus {
-    background-color: transparent;
-    color: $color;
-    border: 1px solid $color;
-    box-shadow: inset 0px 0px 0px 1px $color;
-    will-change: border-color;
-    @include transitions(all);
-  }
+  background-color: transparent;
+  color: $color;
+  border: 1px solid $color;
+  box-shadow: inset 0px 0px 0px 1px $color;
+  will-change: border-color;
+  @include transitions(all);
 
-  &:hover,
-  &:active {
-    color: darken($color, $fade--percent);
-    box-shadow: inset 0px 0px 0px 1px darken($color, $fade--percent);
-    border-color: darken($color, $fade--percent);
+  @include not-gadgets {
+    &:focus,
+    &:hover,
+    &:active {
+      color: darken($color, $fade--percent);
+      box-shadow: inset 0px 0px 0px 1px darken($color, $fade--percent);
+      border-color: darken($color, $fade--percent);
+    }
   }
 }
 
