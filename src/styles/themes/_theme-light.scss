@@ -4,13 +4,21 @@
 //////////////////////////////////////////////////////
 
 %theme-light {
-  $colors__background: #fafafa !global;
+  $colors__background: #f5f7f9 !global;
   $colors__background--dark: lighten($colors__primary, ($fade--percent * 6.5)) !global;
-  $colors__text: #6c7a89 !global;
-  $colors__card: $colors__white !global;
-  $colors__border: #c6dde5 !global;
-
+  $colors__background--darken: darken($colors__background, $fade--percent) !global;
+  // $colors__text: #6c7a89 !global;
+  $colors__text: rgba(10, 30, 50, 0.9) !global;
+  $colors__text__light: rgba(10, 30, 50, 0.6) !global;
+  $colors__buttons: $colors__white !global;
+  $colors__border: rgba(11,32,55,.12) !global;
   $colors__placeholder: $colors__border !global;
+
+  $colors__layout__background: $colors__white !global;
+  $colors__cards__background: $colors__background !global;
+  $colors__labels__background: rgba(10,30,50,.9) !global;
+  $colors__inputs__background: $colors__background--dark !global;
+  $colors__footer__background: $colors__background--darken !global;
 }
 
 .app {
@@ -19,12 +27,13 @@
 
     @include themes-content;
 
-    .label {
-      color: darken($colors__border, ($fade--percent * 2.5));
+    .header {
+      background: $colors__white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .footer {
-      background: $colors__border;
+      color: $colors__white;
     }
   }
 }

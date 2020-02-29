@@ -8,7 +8,7 @@
 
   input {
     color: $colors__text;
-    background: $colors__background--dark;
+    background: $colors__inputs__background;
     border: 1px solid $colors__border;
   }
 
@@ -21,27 +21,25 @@
 
   .layout {
     color: $colors__text;
-    background: $colors__background;
-  }
-
-  .header {
-    background: $colors__background;
-    border-bottom: 1px solid $colors__border;
+    background: $colors__layout__background;
   }
 
   .form {
-    background: $colors__card;
+    background: $colors__cards__background;
     border: 1px solid $colors__border;
   }
 
+  .label {
+    color: $colors__labels__background;
+  }
+
   .switch {
-    background: $colors__card;
+    background: $colors__cards__background;
     color: $colors__text;
     border: 1px solid $colors__border;
   }
 
   .footer {
-    background: $colors__card;
-    color: $colors__text;
+    background: $colors__footer__background;
   }
 }

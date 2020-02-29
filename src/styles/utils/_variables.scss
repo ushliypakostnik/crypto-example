@@ -9,12 +9,12 @@ $images__path--root: "../../assets/images/";
 // Sizes and rounding
 //////////////////////////////////////////////////////
 
-$gutter: 20px;
+$gutter: 32px;
 
 $border-width: 2px;
 
-$border-radius__large: 12px;
-$border-radius__small: 7px;
+$border-radius__large: 8px;
+$border-radius__small: 4px;
 
 
 // Elements
@@ -24,8 +24,8 @@ $border-radius__small: 7px;
 // Buttons
 
 $buttons__border-radius: $border-radius__small;
-$btn_padding_vertical_base: $gutter * 2/3;
-$btn_padding_horizontal_base: $gutter;
+$buttons_padding_vertical_base: 15px;
+$buttons_padding_horizontal_base: 25px;
 
 
 // Inputs
@@ -40,10 +40,10 @@ $inputs__height__mobile: 45px;
 $header__height__not-xs: 80px;
 $header__height__xs: 60px;
 
-$footer__height__not-xs: 35px;
-$footer__height__xs: 30px;
+$footer__height__not-xs: 60px;
+$footer__height__xs: 40px;
 
-$steps__height: 400px;
+$form--main__width: 700px;
 
 
 // Layouts
@@ -91,6 +91,7 @@ $colors__minter: #d15c22;
 
 // Grays
 $colors__grays--lighter: #fafafa;
+$colors__grays--disabled: #dddddd;
 
 
 // Links

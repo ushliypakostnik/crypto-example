@@ -6,11 +6,18 @@
 %theme-dark {
   $colors__background: #263340 !global;
   $colors__background--dark: darken($colors__background, $fade--percent) !global;
+  $colors__background--darken: darken($colors__background, ($fade--percent * 2)) !global;
   $colors__text: #aebfd0 !global;
-  $colors__card: #1c2630 !global;
+  $colors__text__light: lighten($colors__text, ($fade--percent * 2)) !global;
+  $colors__buttons: $colors__white !global;
   $colors__border: #131920 !global;
-
   $colors__placeholder: $colors__border !global;
+
+  $colors__layout__background: $colors__background !global;
+  $colors__footer__background: $colors__background--dark !global;
+  $colors__labels__background: $colors__text__light !global;
+  $colors__cards__background: $colors__background--dark !global;
+  $colors__inputs__background: $colors__background--darken !global;
 }
 
 .app {
@@ -19,8 +26,19 @@
 
     @include themes-content;
 
-    .label {
-      color: lighten($colors__border, ($fade--percent * 4));
+    .header {
+      background: $colors__background--dark;
+      border-bottom: 1px solid $colors__background--darken;
+    }
+
+    .button-switch {
+      .button--light {
+        @include btn-color($colors__text, $colors__background);
+      }
+    }
+
+    .footer {
+      color: $colors__text;
     }
   }
 }

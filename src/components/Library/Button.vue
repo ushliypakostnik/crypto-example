@@ -58,29 +58,39 @@
   @import "@/styles/_stylebase.scss";
 
   .button {
+    border: none;
     display: inline-block;
     text-align: center;
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
     border-radius: $buttons__border-radius;
-    padding: $btn_padding_vertical_base $btn_padding_horizontal_base;
+    padding: $buttons_padding_vertical_base $buttons_padding_horizontal_base;
     @include text($font-family__sans, $font-size--small, $font-weight__sans__bold);
+    letter-spacing: 0.1em;
 
     @include xs {
       @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__bold);
     }
 
     &--primary {
-      @include btn-color($colors__text, $colors__primary);
+      @include btn-color($colors__buttons, $colors__primary);
+    }
 
-      .icon path {
-        fill: $colors__text;
-      }
+    &--light {
+      @include btn-color($colors__text, $colors__grays--disabled);
     }
 
     &--transparent {
       @include btn-transparent-color($colors__primary);
+    }
+
+    &--bit {
+      @include btn-color($colors__buttons, $colors__bit);
+    }
+
+    &--minter {
+      @include btn-color($colors__buttons, $colors__minter);
     }
 
     &--transparent-bit {
@@ -96,12 +106,6 @@
       cursor: unset;
       opacity: $fade--disabled;
       pointer-events: none;
-    }
-
-    .icon {
-      position: absolute;
-      top: 13px;
-      left: $gutter / 2;
     }
   }
 </style>

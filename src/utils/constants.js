@@ -35,11 +35,9 @@ export const LOCALES = {
     layout: {
       logo: 'Easy way to send a value',
     },
-    elements: {
-      step1: {
-        header: 'Send coins',
-        address: 'ADDRESS',
-        deeplink: 'DEEPLINK',
+    views: {
+      main: {
+        header1: 'Send coins to address',
         copy: 'Copy address',
         bit: {
           part1: 'Open ',
@@ -49,53 +47,38 @@ export const LOCALES = {
           part1: 'Open ',
           part2: 'console.minter',
         },
-        ammout: 'Ammount BIP',
+        header2: 'Or use deeplink',
+        ammount: 'Ammount BIP',
+        qr: 'Send 10 BIP',
       },
-      balance: {
-        loader: 'Waiting for coins',
-        balance: 'Balance',
+      page404: {
+        text: 'Page not found!!!',
       },
-      step2: {
-        header: 'Share link',
-      },
-    },
-    page404: {
-      text: 'Page not found!!!',
     },
   },
   [LANGUAGES[1].name]: {
     layout: {
       logo: 'Простой способ отправить деньги',
     },
-    elements: {
-      step1: {
-        header: 'Отправить монеты',
-        address: 'По адресу',
-        deeplink: 'По QR-коду',
-        copy: 'Скопируйте адрес',
+    views: {
+      main: {
+        header1: 'Отправить монеты по адресу',
+        copy: 'Copy address',
         bit: {
-          part1: 'Открыть ',
+          part1: 'Open ',
           part2: 'wallet.bit.to',
         },
         minter: {
-          part1: 'Открыть ',
+          part1: 'Open ',
           part2: 'console.minter',
         },
-        ammout: {
-          notxs: 'Количество BIP',
-          xs: 'Кол-во BIP',
-        },
+        header2: 'Или используйте deeplink',
+        ammount: 'Количество BIP',
+        qr: 'Send 10 BIP',
       },
-      balance: {
-        loader: 'В ожидании монет',
-        balance: 'Баланс',
+      page404: {
+        text: 'Страница не найдена!!!',
       },
-      step2: {
-        header: 'Поделиться ссылкой',
-      },
-    },
-    page404: {
-      text: 'Страница не найдена!!!',
     },
   },
 };

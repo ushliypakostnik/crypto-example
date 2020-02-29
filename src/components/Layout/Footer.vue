@@ -31,8 +31,9 @@
       height: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+      @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__regular);
     }
   }
 </style>

@@ -2,7 +2,8 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic');
+// @import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic');
 
 // Typographic Variables
 //////////////////////////////////////////////////////
@@ -31,8 +32,10 @@ $line-height--small: floor($line-height--computed * $font-size__coefficient--sma
 $line-height--xsmall: floor($line-height--computed * $font-size__coefficient--xsmall); // 18px
 
 // stylelint-disable value-keyword-case
-$font-family__sans: "Play", Helvetica, Arial, sans-serif;
+// $font-family__sans: "Play", Helvetica, Arial, sans-serif;
+$font-family__sans: "Open Sans", Helvetica, Arial, sans-serif;
 // stylelint-enable value-keyword-case
+$font-weight__sans__light: 300;
 $font-weight__sans__regular: 400;
 $font-weight__sans__bold: 700;
 

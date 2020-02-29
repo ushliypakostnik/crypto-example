@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import Loading from '@/components/Elements/Loading.vue';
+  import Loading from '@/components/Library/Loading.vue';
 
   export default {
     name: 'Balance',

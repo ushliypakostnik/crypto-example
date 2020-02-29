@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="container">
+    <div class="container-fluid">
       <Logo />
       <div class="header__right">
         <LangSwitch /><ThemeSwitch />
@@ -11,8 +11,8 @@
 
 <script>
   import Logo from '@/components/Layout/Logo.vue';
-  import LangSwitch from '@/components/Elements/LangSwitch.vue';
-  import ThemeSwitch from '@/components/Elements/ThemeSwitch.vue';
+  import LangSwitch from '@/components/Layout/LangSwitch.vue';
+  import ThemeSwitch from '@/components/Layout/ThemeSwitch.vue';
 
   export default {
     name: 'Header',
@@ -36,13 +36,12 @@
     left: 0;
     right: 0;
     top: 0;
-    border-bottom: 1px solid $colors__border;
 
     @include xs {
       height: $header__height__xs;
     }
 
-    .container {
+    .container-fluid {
       height: 100%;
       display: flex;
       flex-direction: row;

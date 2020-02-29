@@ -1,16 +1,8 @@
 <template>
-  <ul class="switch">
-    <li
-      v-for="value in languages"
-      v-bind:key="value"
-    >
-      <a v-if="value !== language"
-        href="#"
-        @click.prevent="changeLanguage(value)"
-      >{{ value }}</a>
-      <span v-else>{{ value }}</span>
-    </li>
-  </ul>
+  <ButtonSwitch
+    :values="languages"
+    :value.sync="l"
+  />
 </template>
 
 <script>
@@ -18,15 +10,28 @@ import { createNamespacedHelpers } from 'vuex';
 
 import { LANGUAGES } from '@/utils/constants';
 
+import ButtonSwitch from '@/components/Library/ButtonSwitch.vue';
+
 const { mapGetters } = createNamespacedHelpers('utils');
 
 export default {
   name: 'LangSwitch',
 
+  components: { ButtonSwitch },
+
   computed: {
     ...mapGetters({
       language: 'language',
     }),
+
+    l: {
+      get() {
+        return this.language;
+      },
+      set(value) {
+        this.changeLanguage(value);
+      }
+    },
 
     languages() {
       const languages = LANGUAGES.map((language) => {

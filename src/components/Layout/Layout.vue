@@ -32,23 +32,13 @@ export default {
     position: relative;
     min-height: 100vh;
     padding-top: $header__height__not-xs + $gutter;
-    padding-bottom: $footer__height__not-xs + $gutter;
+    padding-bottom: $footer__height__not-xs + ($gutter * 2);
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     @include xs {
-      padding-top: $header__height__xs + $gutter;
+      padding-top: $header__height__xs + ($gutter / 2);
       padding-bottom: $footer__height__xs + $gutter;
-    }
-  }
-
-  .main {
-    @include not-gadgets {
-      $height: $steps__height + $header__height__not-xs + $footer__height__not-xs + 150px;
-      @media (min-height: $height) {
-        margin-top: -15vh;
-      }
     }
   }
 </style>

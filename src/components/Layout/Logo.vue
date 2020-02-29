@@ -36,11 +36,7 @@ export default {
 
     a {
       display: inline-block;
-      margin-right: $gutter;
-
-      @include xs {
-        margin-right: $gutter / 2;
-      }
+      margin-right: $gutter / 2;
     }
 
     &__text {

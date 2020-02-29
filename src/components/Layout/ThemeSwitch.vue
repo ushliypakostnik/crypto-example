@@ -1,16 +1,8 @@
 <template>
-  <ul class="switch">
-    <li
-      v-for="value in themes"
-      v-bind:key="value"
-    >
-      <a v-if="value !== theme"
-        href="#"
-        @click.prevent="changeTheme(value)"
-      >{{ value }}</a>
-      <span v-else>{{ value }}</span>
-    </li>
-  </ul>
+  <ButtonSwitch
+    :values="themes"
+    :value.sync="t"
+  />
 </template>
 
 <script>
@@ -18,10 +10,14 @@ import { createNamespacedHelpers } from 'vuex';
 
 import { THEMES } from '@/utils/constants';
 
+import ButtonSwitch from '@/components/Library/ButtonSwitch.vue';
+
 const { mapGetters } = createNamespacedHelpers('utils');
 
 export default {
   name: 'ThemeSwitch',
+
+  components: { ButtonSwitch },
 
   computed: {
     ...mapGetters({
@@ -34,8 +30,16 @@ export default {
       });
       return themes;
     },
-  },
 
+    t: {
+      get() {
+        return this.theme;
+      },
+      set(value) {
+        this.changeTheme(value);
+      }
+    },
+  },
 
   methods: {
     changeTheme(theme) {
